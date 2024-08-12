@@ -1,0 +1,50 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+div.w-md-editor-toolbar {
+	display: flex;
+	padding: 0.5rem;
+	@apply bg-slate-800;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+	}
+	li > button {
+		padding: 2px;
+	}
+
+	li.active > button,
+	li > button:hover {
+		@apply text-cyan-500/70;
+	}
+}
+
+.w-md-editor-toolbar-divider {
+	height: unset !important;
+}
+
+.w-md-editor {
+	@apply bg-slate-800 !important;
+}
+
+.wmde-markdown {
+	@apply bg-slate-800 !important;
+}
+
+ul {
+	list-style-type: disc;
+	li > ul {
+		list-style-type: circle;
+	}
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+li > button > svg {
+	width: 1rem;
+	height: 1rem;
+}
