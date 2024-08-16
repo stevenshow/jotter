@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:up": "cd ./db && docker compose up -d",
+    "db:migrate": "npx prisma migrate dev --schema ./prisma/schema.prisma"
   },
   "dependencies": {
     "@mdxeditor/editor": "^3.11.0",
